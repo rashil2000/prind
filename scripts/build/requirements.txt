@@ -1,3 +1,0 @@
-GitPython==3.1.45
-python-on-whales==0.78.0
-PyYAML==6.0.2
