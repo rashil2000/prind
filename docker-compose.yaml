@@ -55,13 +55,13 @@ services:
 
   ## Config dir needs to be writable by uid/gid 1000
   ## This container sets the right permissions and exits
-  init:
-    image: busybox:latest
-    command: chown -R 1000:1000 /prind/config
-    volumes:
-      - .:/prind
-    labels:
-      org.prind.service: init
+  # init:
+  #   image: busybox:latest
+  #   command: mkdir -p /prind/config && chown -R 1000:1000 /prind/config
+  #   volumes:
+  #     - .:/prind
+  #   labels:
+  #     org.prind.service: init
 
   ## Loadbalancer/Proxy
   traefik:
