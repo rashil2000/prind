@@ -14,6 +14,10 @@ x-ustreamer-svc: &ustreamer-svc
 
 ## Add your personal config here
 services:
+  klipper:
+    volumes:
+      - ./plugins:/opt/klipper/klippy/extras/custom
+
   webcam:
     <<: *ustreamer-svc
     devices:

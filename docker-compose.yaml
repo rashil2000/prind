@@ -19,7 +19,7 @@ services:
       -l printer_data/logs/klippy.log
     volumes:
       - /dev:/dev
-      - ./config:/opt/printer_data/config
+      - ./printer.cfg:/opt/printer_data/config/printer.cfg
       - run:/opt/printer_data/run
       - gcode:/opt/printer_data/gcodes
       - log:/opt/printer_data/logs
@@ -39,7 +39,7 @@ services:
       - /dev:/dev
       - run:/opt/printer_data/run
       - octoprint:/octoprint
-      - ./config/octoprint.yaml:/octoprint/octoprint/config.yaml
+      - ./octoprint.yaml:/octoprint/octoprint/config.yaml
     profiles:
       - octoprint
     labels:
