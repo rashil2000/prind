@@ -49,18 +49,6 @@ services:
       traefik.http.routers.octoprint.rule: PathPrefix(`/`)
       traefik.http.routers.octoprint.entrypoints: web
 
-  hostmcu:
-    image: mkuf/klipper:latest-hostmcu
-    restart: unless-stopped
-    privileged: true
-    volumes:
-      - /dev:/dev
-      - run:/opt/printer_data/run
-    profiles:
-      - hostmcu
-    labels:
-      org.prind.service: hostmcu
-
 
   ## Accompanying Services/Infra
   ##
